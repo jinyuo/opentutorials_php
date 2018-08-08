@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!--액션은 어디로 지정하겠다. 전송 방식은 포스트 방식. enctype을 반드시 multipart/form-data로 반드시 지정할 것-->
+    <form enctype="multipart/form-data" action="1.php" method="post">
+      <!--타입이 히든이면 화면 표시 없음. 필요에 의해 서버로 전송해야 하는 정보가 있는 경우-->
+      <!--파일 컨트롤보다 먼저 나와야 함. 언제든지 수정 가능. php 설정 손 대기 어려울 경우에 사용-->
+      <!--전송 파일 최대 크기 지정-->
+    <input type="hidden" name="MAX_FILE_SIZE" value="300000">
+      <!--업로드 컨트롤-->
+      <input type="file" name="userfile">
+      <!--input type="file" name="userfile2"-->
+      <input type="submit" value="upload">
+    </form>
+  </body>
+</html>
